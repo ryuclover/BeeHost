@@ -1828,6 +1828,8 @@ h3 {
 .header-inner { gap: 24px; }
 .language-switcher { display: inline-flex; align-items: center; gap: 7px; flex-shrink: 0; color: #d4dbe5; border: 1px solid #475264; border-radius: 7px; background: #191f29; padding-left: 10px; min-height: 44px; }
 .language-switcher select { background: transparent; color: inherit; border: 0; cursor: pointer; font-size: 12px; font-weight: 700; min-height: 42px; min-width: 49px; padding: 8px 5px 8px 0; border-radius: 5px; }
+.language-switcher:focus-within { outline: 2px solid var(--yellow); outline-offset: 3px; }
+.language-switcher select:focus { outline: none; }
 .language-switcher option { background: #191f29; color: #f1f3f7; }
 @media (min-width: 761px) and (max-width: 1050px) {
   .header-inner { gap: 14px; }
