@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" shape-rendering="crispEdges">
+  <symbol id="valheim" viewBox="0 0 64 64">
+    <path fill="#18272d" d="M14 16h8v-6h20v6h8v8h6v20h-6v8H14v-8H8V24h6z"/>
+    <path fill="#b9d0c9" d="M14 18h8v10h-6v8h-4V24h2zM42 18h8v6h2v12h-4v-8h-6z"/>
+    <path fill="#f4e9bc" d="M8 8h6v10h8v8H12v-4H8zM50 8h6v14h-4v4H42v-8h8z"/>
+    <path fill="#bdc6b2" d="M8 8h6v4H8zM50 8h6v4h-6z"/>
+    <path fill="#739a9b" d="M24 14h16v4h6v22H18V18h6z"/>
+    <path fill="#a8c7bd" d="M24 14h8v20H18V22h6z"/>
+    <path fill="#e5ce86" d="M28 14h8v28h-8zM16 34h32v6H16z"/>
+    <path fill="#fff0b2" d="M28 16h4v16h-4z"/>
+    <path fill="#f3c49a" d="M20 40h24v8h-4v6H24v-6h-4z"/>
+    <path fill="#17272c" d="M22 40h6v4h-6zM36 40h6v4h-6z"/>
+    <path fill="#bd824e" d="M24 48h16v6h-4v4h-8v-4h-4z"/>
+    <path fill="#efd29b" d="M28 48h8v4h-8z"/>
+  </symbol>
+  <symbol id="terraria" viewBox="0 0 64 64">
+    <path fill="#163229" d="M24 4h16v4h10v8h6v16h-6v8H38v8h14v8H12v-8h14v-8H14v-6H8V18h6V10h10z"/>
+    <path fill="#457d3d" d="M24 8h16v6h10v8h4v10h-8v6H18v-6h-6V20h6V12h6z"/>
+    <path fill="#78b956" d="M24 8h14v6h10v8H36v6H16v-8h4v-6h4z"/>
+    <path fill="#a9d976" d="M24 12h10v4H24zM18 20h8v4h-8z"/>
+    <path fill="#74a64c" d="M40 24h8v8h-8z"/>
+    <path fill="#9e6d3e" d="M28 28h8v22h-8zM22 32h6v6h-6zM36 30h6v6h-6z"/>
+    <path fill="#d29f63" d="M28 30h4v18h-4z"/>
+    <path fill="#537e3a" d="M16 48h10v-4h12v4h10v6H16z"/>
+    <path fill="#a2c963" d="M18 48h8v4h-8zM38 48h6v4h-6z"/>
+    <path fill="#eab955" d="M42 18h4v4h-4z"/>
+  </symbol>
+  <symbol id="rust" viewBox="0 0 64 64">
+    <path fill="#30262a" d="M12 14h40v6h4v32h-4v6H12v-6H8V20h4z"/>
+    <path fill="#a4583c" d="M14 18h36v36H14z"/>
+    <path fill="#d58052" d="M14 18h36v8H14z"/>
+    <path fill="#743f35" d="M16 30h32v18H16z"/>
+    <path fill="#dba876" d="M12 24h6v28h-6zM46 24h6v28h-6zM18 48h28v6H18z"/>
+    <path fill="#e4b56e" d="M24 26h16v4h4v16H20V30h4z"/>
+    <path fill="#46392f" d="M28 28h8v6h-8zM24 36h6v6h-8v-4h2zM34 36h6v2h2v4h-8z"/>
+    <path fill="#fff1c1" d="M30 36h4v4h-4z"/>
+    <path fill="#bcc9c4" d="M38 6h12v4h-4v8h-6v-8h-2z"/>
+    <path fill="#687f80" d="M42 10h4v8h-4z"/>
+    <path fill="#243238" d="M14 24h4v4h-4zM46 24h4v4h-4zM14 48h4v4h-4zM46 48h4v4h-4z"/>
+  </symbol>
+  <symbol id="v-rising" viewBox="0 0 64 64">
+    <path fill="#251e34" d="M6 6h8v6h8V6h8v12h4V6h8v6h8V6h8v22h-6v28H12V28H6z"/>
+    <path fill="#a09bbb" d="M10 10h4v8h8v-8h4v16H10zM38 10h4v8h8v-8h4v16H38z"/>
+    <path fill="#665d82" d="M14 26h12v26H14zM38 26h12v26H38z"/>
+    <path fill="#8f84a5" d="M16 28h4v22h-4zM40 28h4v22h-4z"/>
+    <path fill="#c25e79" d="M26 18h12v6h6v8H20v-8h6z"/>
+    <path fill="#ed97a2" d="M26 20h6v6h-6z"/>
+    <path fill="#9986a5" d="M24 32h16v20H24z"/>
+    <path fill="#392b46" d="M28 38h8v14h-8zM18 30h4v6h-4zM42 30h4v6h-4z"/>
+    <path fill="#ffd797" d="M18 30h2v4h-2zM42 30h2v4h-2z"/>
+    <path fill="#b8a9c4" d="M10 52h44v4H10z"/>
+    <path fill="#f3d8a3" d="M30 4h4v4h-4z"/>
+  </symbol>
+  <symbol id="vintage-story" viewBox="0 0 64 64">
+    <path fill="#302b23" d="M28 4h12v4h10v6h6v12H42v-4h-6v10h-4v10h-6v12h-6v4H10v-8h4V40h6V30h6V18h-4V8h6z"/>
+    <path fill="#91aba7" d="M28 8h12v4h8v6h4v6H42v-6H28z"/>
+    <path fill="#d6dfcc" d="M28 8h10v4H28zM40 12h8v4h-8z"/>
+    <path fill="#5e807e" d="M28 16h12v6h-8v6h-6v-8h2z"/>
+    <path fill="#a77b4a" d="M28 26h4v6h-6v10h-6v10h-6v4h-2v-6h4V40h6V30h6z"/>
+    <path fill="#e0b778" d="M24 32h4v6h-4zM18 42h4v6h-4z"/>
+    <path fill="#7fa878" d="M44 38h8v4h6v10H38V42h6z"/>
+    <path fill="#accd90" d="M44 38h6v6h-8v4h-4v-6h6z"/>
+    <path fill="#4d7862" d="M48 46h10v6H44v-4h4z"/>
+  </symbol>
+  <symbol id="7-days" viewBox="0 0 64 64">
+    <path fill="#202b32" d="M26 4h12v4h6v8h8v8h4v28h-4v6H12v-6H8V24h4v-8h8V8h6z"/>
+    <path fill="#90aaa1" d="M26 8h12v4h4v8H22v-8h4z"/>
+    <path fill="#d3dcbb" d="M28 8h8v4h-8z"/>
+    <path fill="#4a7370" d="M14 20h36v30H14z"/>
+    <path fill="#739789" d="M14 20h36v10H14zM14 30h6v18h-6z"/>
+    <path fill="#b47d52" d="M10 28h8v22h-8zM46 28h8v22h-8z"/>
+    <path fill="#dec29a" d="M12 30h4v12h-4zM48 30h4v12h-4z"/>
+    <path fill="#2f4d4b" d="M20 32h24v20H20z"/>
+    <path fill="#d5d8b4" d="M28 32h8v6h6v8h-6v6h-8v-6h-6v-8h6z"/>
+    <path fill="#b96c57" d="M30 36h4v6h6v2h-6v6h-4v-6h-6v-2h6z"/>
+    <path fill="#8ca898" d="M14 52h36v4H14z"/>
+  </symbol>
+  <symbol id="mushrooms" viewBox="0 0 64 64">
+    <path fill="#253b32" d="M6 54h52v6H6zM12 48h4v8h-4zM50 46h4v10h-4z"/>
+    <path fill="#d0bd97" d="M22 30h12v24H22zM44 42h8v12h-8z"/>
+    <path fill="#f1deaf" d="M22 32h6v20h-6zM44 44h4v10h-4z"/>
+    <path fill="#714c71" d="M18 10h20v6h6v8h4v12H8V24h4v-8h6z"/>
+    <path fill="#b77fba" d="M18 14h18v6h6v10H12v-6h6z"/>
+    <path fill="#f1d6c4" d="M20 18h6v6h-6zM32 24h6v6h-6zM12 30h32v4H12z"/>
+    <path fill="#cb9363" d="M42 32h12v4h6v10H36V36h6z"/>
+    <path fill="#f6dc9b" d="M44 34h6v4h-6zM38 42h18v2H38z"/>
+    <path fill="#629272" d="M6 52h8v4H6zM50 52h8v4h-8zM36 50h4v6h-4z"/>
+  </symbol>
+  <symbol id="crystals" viewBox="0 0 64 64">
+    <path fill="#27324b" d="M6 52h52v6H6z"/>
+    <path fill="#537b9c" d="M10 28l8-8 8 8v26H10z"/>
+    <path fill="#91d5d5" d="M10 28l8-8v30h-8z"/>
+    <path fill="#6d659e" d="M24 14l10-10 10 10v40H24z"/>
+    <path fill="#bba4e3" d="M24 14L34 4v44H24z"/>
+    <path fill="#ddcef4" d="M26 16l4-4v24h-4z"/>
+    <path fill="#63879e" d="M40 34l8-10 8 10v20H40z"/>
+    <path fill="#a3d8da" d="M40 34l8-10v26h-8z"/>
+    <path fill="#d6d5ac" d="M12 6h4v4h4v4h-4v4h-4v-4H8v-4h4z"/>
+  </symbol>
+  <symbol id="lantern" viewBox="0 0 64 64">
+    <path fill="#445d62" d="M28 4h10v4h4v10h-4V8h-8v10h-4V8h2z"/>
+    <path fill="#a5a274" d="M22 18h24v6H22z"/>
+    <path fill="#31414a" d="M18 24h32v28H18zM22 52h24v6H22z"/>
+    <path fill="#bf8c46" d="M22 28h24v20H22z"/>
+    <path fill="#f6cd6c" d="M26 28h16v20H26z"/>
+    <path fill="#fff0b5" d="M30 30h8v14h-8z"/>
+    <path fill="#89957a" d="M20 24h4v26h-4zM44 24h4v26h-4zM24 50h20v4H24z"/>
+  </symbol>
+  <symbol id="sprig" viewBox="0 0 64 64">
+    <path fill="#39594c" d="M30 20h4v38h-4zM18 28h4v22h-4zM46 18h4v32h-4z"/>
+    <path fill="#658f73" d="M22 20h8v8h-8zM34 32h10v8H34zM10 30h8v8h-8zM22 42h8v8h-8zM50 24h8v8h-8zM38 16h8v8h-8z"/>
+    <path fill="#b8a0c6" d="M28 6h8v4h4v8h-4v4h-8v-4h-4v-8h4z"/>
+    <path fill="#f5d983" d="M30 12h4v4h-4z"/>
+  </symbol>
+  <symbol id="sparkle" viewBox="0 0 64 64">
+    <path fill="#d7c18a" d="M28 14h8v12h12v8H36v12h-8V34H16v-8h12z"/>
+    <path fill="#e7e0bf" d="M28 26h8v8h-8z"/>
+    <path fill="#8ba7aa" d="M48 4h4v4h4v4h-4v4h-4v-4h-4V8h4zM8 46h4v4h4v4h-4v4H8v-4H4v-4h4z"/>
+  </symbol>
+</svg>
