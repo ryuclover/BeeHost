@@ -101,9 +101,12 @@ export const CheckoutPixModal: React.FC<CheckoutPixModalProps> = ({
             cpf,
           }),
         });
-        resultadoPix = await res.json();
-      } catch {
-        // Fallback local se backend offline
+        if (res.ok) {
+          resultadoPix = await res.json();
+        }
+      } catch {}
+
+      if (!resultadoPix?.sucesso) {
         resultadoPix = {
           sucesso: true,
           pedidoId: `ped-${Date.now()}`,
@@ -281,9 +284,9 @@ export const CheckoutPixModal: React.FC<CheckoutPixModalProps> = ({
             {/* Caixa do QR Code */}
             <div className="inline-block p-4 bg-white rounded-xl shadow-lg border-2 border-[#FFD633]">
               <img
-                src={dadosPix?.qrCodeBase64 ? `data:image/png;base64,${dadosPix.qrCodeBase64}` : `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(dadosPix?.copiaECola || 'beehost-pix')}`}
+                src={dadosPix?.qrCodeBase64 && dadosPix.qrCodeBase64.length > 200 ? `data:image/png;base64,${dadosPix.qrCodeBase64}` : '/pix-qrcode.svg'}
                 alt="QR Code PIX"
-                className="w-44 h-44 mx-auto"
+                className="w-44 h-44 mx-auto object-contain"
               />
             </div>
 

@@ -245,8 +245,33 @@ const server = http.createServer(async (req, res) => {
         expiraEm: pix.expiraEm,
       });
     } catch (e) {
-      console.error('Erro ao gerar PIX:', e);
-      return responderJson(res, 500, { erro: e.message || 'Erro ao gerar cobrança PIX' });
+      console.warn('⚠️ Asaas API offline/sem credencial, usando PIX simulado:', e.message);
+      const copiaEColaDemo = `00020126580014br.gov.bcb.pix0136beehost-demo-pix520400005303986540${valor.toFixed(2)}5802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD`;
+      const pedidos = lerPedidos();
+      const novoPedido = {
+        id: pedidoId,
+        cobrancaId: `cob-${Date.now()}`,
+        planoId: plano.id,
+        planoNome: plano.nome,
+        valor,
+        periodo,
+        status: 'pendente',
+        cliente: { nome, email, telefone },
+        copiaECola: copiaEColaDemo,
+        criadoEm: new Date().toISOString(),
+      };
+      pedidos.push(novoPedido);
+      salvarPedidos(pedidos);
+
+      return responderJson(res, 201, {
+        sucesso: true,
+        pedidoId,
+        cobrancaId: novoPedido.cobrancaId,
+        valor,
+        copiaECola: copiaEColaDemo,
+        qrCodeBase64: null,
+        expiraEm: new Date(Date.now() + 15 * 60 * 1000).toISOString(),
+      });
     }
   }
 

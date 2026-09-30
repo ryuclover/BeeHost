@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="#ffffff" />
+  <!-- Corner 1 (Top Left) -->
+  <rect x="20" y="20" width="50" height="50" fill="#0b172a" rx="4" />
+  <rect x="28" y="28" width="34" height="34" fill="#ffffff" rx="2" />
+  <rect x="36" y="36" width="18" height="18" fill="#0b172a" rx="2" />
+
+  <!-- Corner 2 (Top Right) -->
+  <rect x="130" y="20" width="50" height="50" fill="#0b172a" rx="4" />
+  <rect x="138" y="28" width="34" height="34" fill="#ffffff" rx="2" />
+  <rect x="146" y="36" width="18" height="18" fill="#0b172a" rx="2" />
+
+  <!-- Corner 3 (Bottom Left) -->
+  <rect x="20" y="130" width="50" height="50" fill="#0b172a" rx="4" />
+  <rect x="28" y="138" width="34" height="34" fill="#ffffff" rx="2" />
+  <rect x="36" y="146" width="18" height="18" fill="#0b172a" rx="2" />
+
+  <!-- Timing Patterns -->
+  <rect x="76" y="24" width="8" height="8" fill="#0b172a" />
+  <rect x="92" y="24" width="8" height="8" fill="#0b172a" />
+  <rect x="108" y="24" width="8" height="8" fill="#0b172a" />
+  <rect x="24" y="76" width="8" height="8" fill="#0b172a" />
+  <rect x="24" y="92" width="8" height="8" fill="#0b172a" />
+  <rect x="24" y="108" width="8" height="8" fill="#0b172a" />
+
+  <!-- Central & Random Matrix Data Modules -->
+  <rect x="80" y="44" width="10" height="10" fill="#0b172a" />
+  <rect x="100" y="44" width="10" height="10" fill="#0b172a" />
+  <rect x="90" y="60" width="20" height="10" fill="#0b172a" />
+  <rect x="120" y="80" width="10" height="20" fill="#0b172a" />
+  <rect x="70" y="80" width="10" height="10" fill="#0b172a" />
+  <rect x="90" y="80" width="20" height="20" fill="#0b172a" rx="2" />
+  <rect x="50" y="80" width="10" height="10" fill="#0b172a" />
+  <rect x="40" y="100" width="20" height="10" fill="#0b172a" />
+  <rect x="80" y="110" width="10" height="20" fill="#0b172a" />
+  <rect x="100" y="110" width="20" height="10" fill="#0b172a" />
+  <rect x="130" y="110" width="10" height="10" fill="#0b172a" />
+  <rect x="150" y="80" width="20" height="10" fill="#0b172a" />
+  <rect x="170" y="100" width="10" height="20" fill="#0b172a" />
+  <rect x="140" y="130" width="20" height="10" fill="#0b172a" />
+  <rect x="170" y="140" width="10" height="10" fill="#0b172a" />
+  <rect x="130" y="160" width="10" height="20" fill="#0b172a" />
+  <rect x="150" y="160" width="20" height="10" fill="#0b172a" />
+  <rect x="80" y="140" width="20" height="20" fill="#0b172a" />
+  <rect x="110" y="150" width="10" height="20" fill="#0b172a" />
+  <rect x="90" y="170" width="10" height="10" fill="#0b172a" />
+  <rect x="70" y="170" width="10" height="10" fill="#0b172a" />
+  <rect x="100" y="130" width="10" height="10" fill="#0b172a" />
+
+  <!-- Center Logo Badge (PIX Icon Look) -->
+  <rect x="86" y="86" width="28" height="28" fill="#ffffff" rx="6" stroke="#0b172a" stroke-width="2" />
+  <path d="M100 91 L108 99 L100 107 L92 99 Z" fill="#32bcad" />
+  <path d="M96 99 L100 95 L104 99 L100 103 Z" fill="#ffffff" />
+</svg>

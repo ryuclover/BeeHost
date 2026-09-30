@@ -19,6 +19,47 @@
 
 ---
 
+## 📸 Demonstração Visual da Plataforma
+
+<div align="center">
+
+### 1. Vitrine Comercial Imersiva (Pixel Art & Web Audio)
+*Experiência gamer com cenários animados em pixel art, internacionalização instantânea (PT-BR / EN-US) e sintetizador sonoro 8-bit nativo.*
+
+![BeeHost - Vitrine Comercial](public/screenshots/01-home.png)
+
+<br/>
+
+### 2. Catálogo e Comparativo de Planos
+*Seleção transparente de capacidades de hardware (RAM dedicada, vCPU e NVMe) com alternância dinâmica entre planos mensais e anuais.*
+
+![BeeHost - Seleção de Planos](public/screenshots/02-planos.png)
+
+<br/>
+
+### 3. Gateway de Pagamento Instantâneo via PIX
+*Emissão automatizada de cobranças dinâmicas com QR Code vetorial, Pix Copia e Cola, polling ativo e confirmação em tempo real via Webhook.*
+
+![BeeHost - Checkout PIX](public/screenshots/03-checkout-pix.png)
+
+<br/>
+
+### 4. Portal de Autoatendimento do Cliente (Self-Service)
+*Dashboard do jogador com monitoramento de status em tempo real, endereço de conexão com cópia rápida (`jogar.beehost.qd.je:38450`), controle de energia e acesso direto ao Crafty Controller.*
+
+![BeeHost - Painel do Cliente](public/screenshots/04-painel-cliente.png)
+
+<br/>
+
+### 5. Painel Administrativo do Operador (Cluster Control)
+*Centro de comando para gerenciamento de contas em nuvem, controle da esteira de rotação rápida de nós e monitoramento de custos operacionais.*
+
+![BeeHost - Painel do Administrador](public/screenshots/05-painel-admin.png)
+
+</div>
+
+---
+
 ## 🌟 Visão Geral da Arquitetura
 
 A **BeeHost** resolve o atrito tradicional de compra e configuração de servidores de jogos através de uma esteira automatizada dividida em 5 camadas:

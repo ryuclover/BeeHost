@@ -14,5 +14,69 @@
     },
     "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790263631323-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
     "criadoEm": "2026-09-24T15:27:11.324Z"
+  },
+  {
+    "id": "ped-1790739763613",
+    "cobrancaId": "pay_sim_1790739763613",
+    "planoId": "plano-turma",
+    "planoNome": "Abelha da Galera",
+    "valor": 34.9,
+    "periodo": "mensal",
+    "status": "pendente",
+    "cliente": {
+      "nome": "Gabriel Gamer",
+      "email": "gabriel@beehost.com.br",
+      "telefone": "11999998888"
+    },
+    "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790739763613-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
+    "criadoEm": "2026-09-30T03:42:43.614Z"
+  },
+  {
+    "id": "ped-1790739790961",
+    "cobrancaId": "pay_sim_1790739790961",
+    "planoId": "plano-turma",
+    "planoNome": "Abelha da Galera",
+    "valor": 34.9,
+    "periodo": "mensal",
+    "status": "pendente",
+    "cliente": {
+      "nome": "Gabriel Gamer",
+      "email": "gabriel@beehost.com.br",
+      "telefone": "11999998888"
+    },
+    "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790739790961-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
+    "criadoEm": "2026-09-30T03:43:10.962Z"
+  },
+  {
+    "id": "ped-1790739867513",
+    "cobrancaId": "pay_sim_1790739867513",
+    "planoId": "plano-turma",
+    "planoNome": "Abelha da Galera",
+    "valor": 34.9,
+    "periodo": "mensal",
+    "status": "pendente",
+    "cliente": {
+      "nome": "Gabriel Gamer",
+      "email": "gabriel@beehost.com.br",
+      "telefone": "11999998888"
+    },
+    "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790739867513-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
+    "criadoEm": "2026-09-30T03:44:27.515Z"
+  },
+  {
+    "id": "ped-1790740101341",
+    "cobrancaId": "pay_sim_1790740101341",
+    "planoId": "plano-turma",
+    "planoNome": "Abelha da Galera",
+    "valor": 34.9,
+    "periodo": "mensal",
+    "status": "pendente",
+    "cliente": {
+      "nome": "Gabriel Gamer",
+      "email": "gabriel@beehost.com.br",
+      "telefone": "11999998888"
+    },
+    "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790740101341-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
+    "criadoEm": "2026-09-30T03:48:21.342Z"
   }
 ]

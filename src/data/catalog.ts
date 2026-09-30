@@ -2,7 +2,7 @@ export const GAMES = [
   { id: 'minecraft', name: 'Minecraft', category: 'Sandbox', description: 'Um mundo de blocos para criar juntos.', color: 'minecraft', plan: 1 },
   { id: 'valheim', name: 'Valheim', category: 'Sobrevivência', description: 'Uma nova saga com seus amigos.', color: 'forest', plan: 1 },
   { id: 'terraria', name: 'Terraria', category: 'Aventura', description: 'Pequenos blocos. Grandes aventuras.', color: 'meadow', plan: 0 },
-  { id: 'rust', name: 'Rust', category: 'Sobrevivência', description: 'Construam sua base. Defendam seu mundo.', color: 'rust', plan: 3 },
+  { id: 'rust', name: 'Rust', category: 'Sobrevivência', description: 'Construam sua base. Defendam seu mundo.', color: 'rust', plan: 2 },
   { id: 'v-rising', name: 'V Rising', category: 'Aventura', description: 'Um castelo para chamar de seu.', color: 'crimson', plan: 2 },
   { id: 'vintage-story', name: 'Vintage Story', category: 'Sandbox', description: 'Criatividade para ir além do horizonte.', color: 'sand', plan: 1 },
   { id: '7-days', name: '7 Days to Die', category: 'Sobrevivência', description: 'Cada noite, uma história para contar.', color: 'slate', plan: 2 },
