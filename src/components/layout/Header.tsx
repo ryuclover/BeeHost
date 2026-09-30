@@ -3,6 +3,7 @@ import { Search, Volume2, VolumeX, Menu } from 'lucide-react';
 import { BeehostLogo } from '../brand/BeehostLogo';
 import { HEADER_LINKS } from '../../data/navigation';
 import { retroAudio } from '../effects/SoundEffects';
+import { LoginModal } from '../auth/LoginModal';
 
 interface HeaderProps {
   activeTab?: string;
@@ -18,6 +19,10 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchClick,
 }) => {
   const [soundOn, setSoundOn] = useState(true);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [hasToken, setHasToken] = useState(() => {
+    return typeof window !== 'undefined' && Boolean(localStorage.getItem('beehost_cliente_token'));
+  });
 
   const toggleSound = () => {
     const next = !soundOn;
@@ -119,15 +124,26 @@ export const Header: React.FC<HeaderProps> = ({
             <Search className="w-3.5 h-3.5" />
           </button>
 
-          {/* Log In */}
+          {/* Log In / Área do Cliente */}
           <button
             onClick={() => {
               retroAudio.playHover();
-              alert('Beehost Game Control Panel: Redirecting to auth portal...');
+              if (hasToken) {
+                window.location.href = '/painel-cliente.html';
+              } else {
+                setIsLoginOpen(true);
+              }
             }}
-            className="hidden sm:inline-flex px-3 py-1.5 text-xs font-semibold text-[#F5F7FF] bg-[#091D3E] hover:bg-[#0B2554] border border-[#183B70] rounded-md transition-all cursor-pointer"
+            className="hidden sm:inline-flex px-3 py-1.5 text-xs font-semibold text-[#F5F7FF] bg-[#091D3E] hover:bg-[#0B2554] border border-[#183B70] rounded-md transition-all cursor-pointer items-center gap-1.5"
           >
-            Log In
+            {hasToken ? (
+              <>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                <span>Meu Servidor</span>
+              </>
+            ) : (
+              <span>Log In</span>
+            )}
           </button>
 
           {/* Yellow CTA Button */}
@@ -147,6 +163,16 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
       </div>
+
+      <LoginModal
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onLoginSuccess={() => {
+          setHasToken(true);
+          setIsLoginOpen(false);
+          window.location.href = '/painel-cliente.html';
+        }}
+      />
     </header>
   );
 };

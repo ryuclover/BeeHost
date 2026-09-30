@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ped-1790263631323",
+    "cobrancaId": "pay_sim_1790263631323",
+    "planoId": "plano-turma",
+    "planoNome": "Abelha da Galera",
+    "valor": 34.9,
+    "periodo": "mensal",
+    "status": "pago",
+    "cliente": {
+      "nome": "Carlos Teste",
+      "email": "carlos@teste.com",
+      "telefone": "11988887777"
+    },
+    "copiaECola": "00020126580014br.gov.bcb.pix0136beehost-ped-1790263631323-pix52040000530398654034.905802BR5915BeeHost Cloud6009Sao Paulo62070503***6304ABCD",
+    "criadoEm": "2026-09-24T15:27:11.324Z"
+  }
+]

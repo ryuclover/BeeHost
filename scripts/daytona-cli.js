@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import https from 'https';
-import fs from 'fs';
 
-const API_KEY = process.env.DAYTONA_API_KEY || 'dtn_e239e571ca9535afdc7945d7671275c86cfe84bda0dd7aebad5b9e38ac3245a9';
+const API_KEY = process.env.DAYTONA_API_KEY || '';
 const BASE_URL = 'https://app.daytona.io/api';
 
 function request(path, method = 'GET', body = null) {

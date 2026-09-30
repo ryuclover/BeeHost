@@ -5,6 +5,7 @@ import { PlansPage } from './pages/PlansPage';
 import { FeaturesPage } from './pages/FeaturesPage';
 import { CommunityPage } from './pages/CommunityPage';
 import { SupportPage } from './pages/SupportPage';
+import { ClientDashboardPage } from './pages/ClientDashboardPage';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -17,6 +18,9 @@ export function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  if (currentPath === '/painel-cliente' || currentPath.endsWith('painel-cliente.html')) {
+    return <ClientDashboardPage />;
+  }
   if (currentPath === '/games' || currentPath.endsWith('games.html')) {
     return <GamesPage />;
   }

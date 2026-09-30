@@ -1,0 +1,11 @@
+[
+  {
+    "id": "conta-1",
+    "nome": "Cloud Node Primário (Produção)",
+    "chaveApi": "dtn_cloud_primary_sample_token_8f92a10b",
+    "dataAdicao": "23/09/2026",
+    "estaAtiva": true,
+    "saldoEstimadoUSD": 98.50,
+    "situacao": "ativa"
+  }
+]

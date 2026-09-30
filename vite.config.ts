@@ -15,6 +15,7 @@ export default defineConfig({
         features: resolve(__dirname, 'features.html'),
         community: resolve(__dirname, 'community.html'),
         support: resolve(__dirname, 'support.html'),
+        clientDashboard: resolve(__dirname, 'painel-cliente.html'),
       },
     },
   },

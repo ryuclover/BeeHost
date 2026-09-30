@@ -7,10 +7,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Dependencies & Build
 node_modules
 dist
 dist-ssr
 *.local
+
+# Binaries & Large Game Files
+*.jar
 
 # Editor directories and files
 .vscode/*

@@ -1,0 +1,24 @@
+$ORIGIN beehost.qd.je.
+$TTL 3600
+
+; ========================================================
+; 🐝 BeeHost - Arquivo de Zona DNS Oficial (DigitalPlat)
+; Domínio: beehost.qd.je
+; ========================================================
+
+; Servidores de Nomes Oficiais
+@       IN      NS      dns1.digitalplat.org.
+@       IN      NS      dns2.digitalplat.org.
+
+; Identificação e Segurança
+@       IN      TXT     "beehost-platform=active"
+@       IN      TXT     "v=spf1 -all"
+
+; Subdomínios de Plataforma da BeeHost
+loja    IN      CNAME   beehost.qd.je.
+admin   IN      CNAME   beehost.qd.je.
+painel  IN      CNAME   beehost.qd.je.
+
+; Conexão Minecraft (Registro SRV para conectar direto pelo nome)
+_minecraft._tcp.jogar   IN      SRV     0 5 25565 beehost.qd.je.
+_minecraft._tcp         IN      SRV     0 5 25565 beehost.qd.je.

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Dono | BeeHost Admin</title>
+  <link rel="stylesheet" href="/estilo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Tela de Login Seguro -->
+  <div id="tela-login" class="tela-cheia flex-centro">
+    <div class="card-login">
+      <div class="logo-box">🐝</div>
+      <h2>Acesso Administrativo</h2>
+      <p class="subtitulo">Digite a senha mestra para gerenciar o BeeHost e as contas Daytona.</p>
+      
+      <form id="form-login">
+        <div class="campo">
+          <label for="senha-admin">Senha de Admin</label>
+          <input type="password" id="senha-admin" placeholder="Digite a senha..." required value="beehost123">
+        </div>
+        <button type="submit" class="btn btn-primario full">Entrar no Painel</button>
+      </form>
+      <p id="erro-login" class="erro escondido">Senha incorreta. Tente novamente.</p>
+    </div>
+  </div>
+
+  <!-- Painel Principal -->
+  <div id="painel-principal" class="escondido">
+    <header class="topo-painel">
+      <div class="container flex-entre">
+        <div class="marca">
+          <div class="logo-icone">🐝</div>
+          <div>
+            <h1>Painel do Dono <span class="tag-status">API Segura</span></h1>
+            <p>Gerenciador de Máquinas, Fila de Swap e Alertas WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="acoes-topo">
+          <div class="status-api">
+            <span class="ponto-verde"></span>
+            <span id="conta-ativa-nome">Carregando...</span>
+          </div>
+          <button id="btn-sair" class="btn btn-secundario sm">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container corpo-painel">
+      <!-- Navegação de Abas -->
+      <nav class="abas">
+        <button class="aba-btn ativa" data-aba="resumo">Resumo do Negócio</button>
+        <button class="aba-btn" data-aba="fila">🔄 Fila de Swap & Chaves</button>
+        <button class="aba-btn" data-aba="whatsapp">📲 Alertas WhatsApp</button>
+        <button class="aba-btn" data-aba="contas">Todas as Contas (<span id="contas-qtd">0</span>)</button>
+        <button class="aba-btn" data-aba="servidores">Servidores Ligados (<span id="servidores-qtd">0</span>)</button>
+      </nav>
+
+      <!-- ABA 1: RESUMO DO NEGÓCIO -->
+      <section id="aba-resumo" class="conteudo-aba">
+        <div class="grid-metricas">
+          <div class="card-metrica">
+            <span class="metrica-titulo">Servidores Ativos</span>
+            <span class="metrica-valor" id="metrica-servidores">-</span>
+            <span class="metrica-status positivo">🟢 Minecraft Online (Porta 25565)</span>
+          </div>
+
+          <div class="card-metrica">
+            <span class="metrica-titulo">Saldo Grátis Disponível</span>
+            <span class="metrica-valor verde" id="metrica-saldo">-</span>
+            <span class="metrica-status">De $100 da conta atual</span>
+          </div>
+
+          <div class="card-metrica">
+            <span class="metrica-titulo">Quando Trocar de Conta</span>
+            <span class="metrica-valor azul" id="metrica-dias">-</span>
+            <span class="metrica-status">Estimativa antes do saldo expirar</span>
+          </div>
+
+          <div class="card-metrica">
+            <span class="metrica-titulo">Seu Custo em VPS</span>
+            <span class="metrica-valor ouro" id="metrica-custo">R$ 0,00</span>
+            <span class="metrica-status positivo">100% de lucro nas vendas</span>
+          </div>
+        </div>
+
+        <div class="banner-ajuda">
+          <div>
+            <h3>💡 Estratégia de Rotação Fácil:</h3>
+            <p>Quando o saldo de $100 estiver perto do fim (a cada 1 ou 2 meses), você pode usar o botão de <strong>Swap Imediato</strong> para assumir a próxima chave de reserva da esteira sem perder os dados dos clientes!</p>
+          </div>
+          <button id="btn-abrir-migracao" class="btn btn-primario sm">Ver Como Trocar de Conta</button>
+        </div>
+      </section>
+
+      <!-- ABA 2: FILA DE SWAP & CHAVES -->
+      <section id="aba-fila" class="conteudo-aba escondido">
+        <!-- Card da Chave Atual com Barra de Progresso -->
+        <div class="card-secao">
+          <div class="flex-entre">
+            <div>
+              <h3>🟢 Chave Atual em Uso</h3>
+              <p class="subtitulo" id="fila-atual-subtitulo">Carregando...</p>
+            </div>
+            <div id="btn-swap-container">
+              <button id="btn-executar-swap" class="btn btn-primario">
+                ⚡ Fazer Swap Imediato
+              </button>
+            </div>
+          </div>
+
+          <!-- Barra de Consumo -->
+          <div class="barra-consumo-container">
+            <div class="flex-entre texto-pequeno mb-1">
+              <span>Consumido: <strong id="fila-consumo-txt">$1.50 (2%)</strong></span>
+              <span>Restante: <strong id="fila-restante-txt" class="verde">$98.50 (98%)</strong></span>
+            </div>
+            <div class="barra-fundo">
+              <div id="barra-progresso" class="barra-preenchimento" style="width: 2%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Próxima na Fila -->
+        <div class="card-secao">
+          <h3>🟡 Próxima Chave Engatilhada (Pronta para Entrar)</h3>
+          <p class="subtitulo">Esta chave assumirá o comando assim que você clicar em Swap ou a atual expirar.</p>
+          <div id="fila-proxima-box" class="esteira-box">
+            <p class="carregando">Carregando esteira...</p>
+          </div>
+        </div>
+
+        <!-- Reabastecer Estoque -->
+        <div class="card-secao">
+          <h3>➕ Reabastecer Estoque de Chaves</h3>
+          <p class="subtitulo">Cadastre contas novas com antecedência para deixar a fila sempre cheia.</p>
+
+          <form id="form-reabastecer-fila" class="form-linha">
+            <input type="text" id="fila-nome" placeholder="Apelido da conta (ex: Conta 03 - Abril)" required>
+            <input type="text" id="fila-chave" placeholder="Chave da API (dtn_...)" required>
+            <button type="submit" class="btn btn-primario">Adicionar à Fila</button>
+          </form>
+        </div>
+
+        <!-- Histórico de Swaps -->
+        <div class="card-secao">
+          <h3>📜 Histórico de Swaps Realizados</h3>
+          <div id="fila-historico" class="lista-itens">
+            <p class="carregando">Nenhum swap realizado recentemente.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 3: ALERTAS WHATSAPP -->
+      <section id="aba-whatsapp" class="conteudo-aba escondido">
+        <div class="card-secao">
+          <h3>📲 Configurar Avisos Automáticos no WhatsApp</h3>
+          <p class="subtitulo">Receba notificações no seu WhatsApp avisando quanto já consumiu e quanto falta para acabar os $100.</p>
+
+          <form id="form-config-whatsapp" class="grid-whatsapp">
+            <div class="campo">
+              <label for="zap-numero">Seu Número com DDD (Ex: 5511999999999)</label>
+              <input type="text" id="zap-numero" placeholder="5511999999999" required>
+            </div>
+
+            <div class="campo">
+              <label for="zap-saldo-minimo">Avisar Quando o Saldo For Menor Que</label>
+              <select id="zap-saldo-minimo" class="input-select">
+                <option value="10">Menos de $10.00 restantes</option>
+                <option value="15" selected>Menos de $15.00 restantes (Recomendado)</option>
+                <option value="20">Menos de $20.00 restantes</option>
+                <option value="30">Menos de $30.00 restantes</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="zap-dias-minimos">Avisar Quando Faltarem Menos De</label>
+              <select id="zap-dias-minimos" class="input-select">
+                <option value="3">3 dias para expirar</option>
+                <option value="5" selected>5 dias para expirar (Recomendado)</option>
+                <option value="7">7 dias para expirar</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="zap-webhook-url">URL da API de WhatsApp (Evolution API / Z-API / Webhook)</label>
+              <input type="text" id="zap-webhook-url" placeholder="https://sua-api.com/message/sendText (opcional)">
+            </div>
+
+            <div class="acoes-form">
+              <button type="submit" class="btn btn-primario">Salvar Configurações</button>
+              <button type="button" id="btn-testar-zap" class="btn btn-secundario">Simular Mensagem Agora</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Preview da Mensagem Formatada de WhatsApp -->
+        <div class="card-secao">
+          <h3>📱 Pré-visualização da Mensagem de WhatsApp</h3>
+          <p class="subtitulo">É exatamente este texto que chegará no seu celular:</p>
+
+          <div class="balao-whatsapp">
+            <pre id="zap-preview-texto">Carregando modelo de mensagem...</pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 4: TODAS AS CONTAS -->
+      <section id="aba-contas" class="conteudo-aba escondido">
+        <div class="card-secao">
+          <h3>Suas Contas Cadastradas</h3>
+          <div id="lista-contas" class="lista-itens">
+            <p class="carregando">Carregando contas...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABA 5: SERVIDORES LIGADOS -->
+      <section id="aba-servidores" class="conteudo-aba escondido">
+        <div class="card-secao">
+          <div class="flex-entre mb-3">
+            <div>
+              <h3>Máquinas Rodando no Daytona</h3>
+              <p class="subtitulo">Servidores sincronizados ao vivo com a API da sua conta ativa.</p>
+            </div>
+            <button id="btn-criar-servidor" class="btn btn-primario sm">➕ Criar Novo Servidor</button>
+          </div>
+
+          <div id="lista-servidores" class="lista-itens">
+            <p class="carregando">Consultando máquinas no Daytona...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal Como Trocar de Conta -->
+  <div id="modal-migracao" class="modal-fundo escondido">
+    <div class="modal-caixa">
+      <div class="modal-topo">
+        <h3>Como Trocar de Conta em 2 Minutos</h3>
+        <button id="btn-fechar-modal" class="btn-fechar">&times;</button>
+      </div>
+      <div class="modal-corpo">
+        <p>Quando os $100 estiverem acabando, siga este roteiro rápido:</p>
+        
+        <div class="passo">
+          <strong>1. Na Conta Antiga (Salva o mundo do cliente):</strong>
+          <code>/home/daytona/daytona-sync.sh backup cliente1</code>
+        </div>
+
+        <div class="passo">
+          <strong>2. Na Nova Conta (Cadastre a nova API Key e restaure):</strong>
+          <code>node scripts/daytona-cli.js create beehost-minecraft</code>
+          <code>/home/daytona/daytona-sync.sh restore cliente1</code>
+        </div>
+
+        <p class="destaque-verde">✅ O endereço do servidor dos jogadores NÃO muda! O túnel reconecta normalmente.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "numeroDestino": "5511999999999",
+  "saldoMinimoAlertaUSD": 10.0,
+  "diasMinimosAlerta": 5,
+  "webhookUrl": "",
+  "apiKeyWhatsApp": "",
+  "alertasAtivos": true
+}

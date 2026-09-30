@@ -82,7 +82,18 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
         </div>
 
         {/* Bottom CTA & Sign */}
-        <div className="pt-6 border-t border-[#168CFF]/20 flex flex-col gap-4">
+        <div className="pt-6 border-t border-[#168CFF]/20 flex flex-col gap-3">
+          <a
+            href="/painel-cliente.html"
+            onClick={() => {
+              retroAudio.playHover();
+              onClose();
+            }}
+            className="w-full py-2.5 bg-[#091D3E] hover:bg-[#0E2C5D] border border-[#183B70] text-[#FFD633] font-pixel text-xs uppercase tracking-wider font-bold rounded transition-all text-center block"
+          >
+            Área do Cliente (Log In)
+          </a>
+
           <button
             onClick={() => {
               onClose();

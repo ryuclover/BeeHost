@@ -14,7 +14,7 @@ ssh <token>@ssh.app.daytona.io
 ```
 *Exemplo com o token da sessão:*
 ```bash
-ssh dtn_e239e571ca9535afdc7945d7671275c86cfe84bda0dd7aebad5b9e38ac3245a9@ssh.app.daytona.io
+ssh dtn_seu_token_aqui@ssh.app.daytona.io
 ```
 
 > **Atenção:**
